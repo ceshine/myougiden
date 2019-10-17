@@ -257,7 +257,7 @@ def nice_self():
             problem=True
 
         try:
-            subprocess.call(['ionice', '-c', 'Idle', '-p', str(os.getpid())])
+            subprocess.call(['ionice', '-c', '3', '-p', str(os.getpid())])
         except OSError:
             problem=True
 
